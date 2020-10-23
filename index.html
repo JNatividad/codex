@@ -27,7 +27,7 @@
         placeholder="insert your email"
         id="txbCinepolisIdMaster"
       />
-      <button class="btn-send" type="submit">send email</button>
+      <button id="boton"  class="btn-send" type="submit">send email</button>
     </form>
 
 
@@ -46,6 +46,20 @@
     ></noscript>
     <!-- End Google Tag Manager (noscript) -->
 
+  <script>
+
+    document.querySelector('#boton').addEventListener('click',function(e){
+      console.log(e);
+      e.preventDefault();
+      let nuevo = document.createElement('h1');
+      nuevo.textContent = 'estas logeqad';
+      nuevo.setAttribute('id','custom-id');
+      document.body.append(nuevo)
+      
+    
+    })
+   
+  </script>
  
   </body>
 </html>
