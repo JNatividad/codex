@@ -1,21 +1,24 @@
 
-function() { 
+
+function() {
 
     try {
 
-        var inputs  = document.querySelectorAll('input');
-        for (i = 0; i < inputs.length; i ++ ){ 
-            var email = inputs[i].value; 
-            if(email.match(/^([\\w-]+(?:\\.[\\w-]+)*)@((?:[\\w-]+\\.)*\\w[\\w-]{0, 66})\\.([a-z]{2, 6}(?:\\.[a-z]{2})?)$/i)){ 
-                return email; 
-            } 
-        }
-     
+        var correo = document.querySelector('#txbCinepolisIdMaster').value;
 
-        
+
+        var regexT = /\S+@\S+\.\S+/;
+        if (regexT.test(correo)) {
+            correo = btoa(correo);
+            return correo;
+
+            localStorage.setItem('email',btoa(correo))
+        } else {
+          return false;
+        }
+
+
     } catch (error) {
-        
+
     }
 }
-
-   
