@@ -52,7 +52,7 @@
       console.log(e);
       e.preventDefault();
       let nuevo = document.createElement('h1');
-      nuevo.textContent = 'estas logeqad';
+      
       nuevo.setAttribute('id','custom-id');
       document.body.append(nuevo)
       
@@ -65,11 +65,15 @@
 <script>
   
 
+
        
   var divButton = document.createElement('div');
   divButton.classList.add('fb-send-to-messenger');
-  divButton.setAttribute('messenger_app_id','')
-  divButton.setAttribute('page_id','')
+  divButton.setAttribute('messenger_app_id','<APP_ID>')
+  divButton.setAttribute('data-ref','<PASS_THROUGH_PARAM>')
+  divButton.setAttribute('color','blue')
+  divButton.setAttribute('size','standard')
+  divButton.style.border = '1px solid red'
 
   
   document.body.append(divButton);
