@@ -30,6 +30,13 @@
       <button id="boton"  class="btn-send" type="submit">send email</button>
     </form>
 
+    <div class="fb-send-to-messenger" 
+  messenger_app_id="1814902711993345" 
+  page_id="" 
+  data-ref="" 
+  color="blue" 
+  size="standard"
+</div>
 
     Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rerum iure
     voluptatem delectus maxime voluptatibus eos, sit tenetur beatae alias
@@ -46,6 +53,18 @@
     ></noscript>
     <!-- End Google Tag Manager (noscript) -->
 
+    <script>
+      window.fbAsyncInit = function() {
+        FB.init({
+          appId            : '1814902711993345',
+          autoLogAppEvents : true,
+          xfbml            : true,
+          version          : 'v8.0'
+        });
+      };
+    </script>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js"></script>
+      
   <script>
 
     document.querySelector('#boton').addEventListener('click',function(e){
