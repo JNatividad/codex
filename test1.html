@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <input type="text" id="txbCinepolisIdMaster">
+
+    <script>
+        function() {
+
+try {
+
+    var correo = document.querySelector('#txbCinepolisIdMaster').value;
+    console.log(correo);
+
+
+    var regexT = /\S+@\S+\.\S+/;
+    if (regexT.test(correo)) {
+        correo = btoa(correo);
+        localStorage.setItem('email',btoa(correo))
+        return correo;
+
+        
+    } else {
+      return false;
+    }
+
+
+} catch (error) {
+
+}
+}
+
+    </script>
+</body>
+</html>
