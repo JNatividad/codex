@@ -8,9 +8,33 @@
     <link rel="stylesheet" href="./css/cartelera.css">
     <link rel="stylesheet" href="./css/marcas.css">
     <link rel="stylesheet" href="./css/master.css">
+      <!-- Google Tag Manager -->
+      <script>
+        (function (w, d, s, l, i) {
+          w[l] = w[l] || [];
+          w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+          var f = d.getElementsByTagName(s)[0],
+            j = d.createElement(s),
+            dl = l != "dataLayer" ? "&l=" + l : "";
+          j.async = true;
+          j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+          f.parentNode.insertBefore(j, f);
+        })(window, document, "script", "dataLayer", "GTM-TKBZ4Z2");
+      </script>
+      <!-- End Google Tag Manager -->
 </head>
 
 <body>
+        <!-- Google Tag Manager (noscript) -->
+        <noscript
+        ><iframe
+          src="https://www.googletagmanager.com/ns.html?id=GTM-TKBZ4Z2"
+          height="0"
+          width="0"
+          style="display: none; visibility: hidden"
+        ></iframe
+      ></noscript>
+      <!-- End Google Tag Manager (noscript) -->
     <button id="btnCloseID">close session</button>
    
     <script>
@@ -533,12 +557,15 @@
                                 class="icon-info-sign"></i>Cinépolis City Center Zona Esmeralda</h2>
                     </a><!-- ngRepeat: movie in date.Movies -->
                     <article data-oculto="0" class="row tituloPelicula ng-scope" ng-repeat="movie in date.Movies">
-                        <figure class="col4"><a href="" ng-click="sendDataLayer(movie, 'Cartelera', cinema.Key)">
-                                <div class="corner 4dx"></div><img
+                        <figure class="col4">
+                            <a href="" ng-click="sendDataLayer(movie, 'Cartelera', cinema.Key)">
+                                <div class="corner 4dx"></div>
+                                <img
                                     ng-src="https://static.cinepolis.com/img/peliculas/35176/1/1/35176.jpg"
                                     alt="Como Perros y Gatos 3: ¡Patas Unidas!"
                                     src="https://static.cinepolis.com/img/peliculas/35176/1/1/35176.jpg">
-                            </a></figure>
+                            </a>
+                        </figure>
                         <div class="descripcion col8"
                             id="cinepolis-city-center-zona-esmeralda-35176-como-perros-y-gatos-3-patas-unidas">
                             <header class="cf">
@@ -15898,17 +15925,25 @@
 
    
 
-  <script>
+  <!-- <script>
      
      if ($("#btnCloseID").length) {
         if (localStorage.hasOwnProperty("email")) {
-          $(".listaCarteleraHorario article .row").each(function () {
-            $(this).append('<div class="fb-messengermessageus" messenger_app_id="364048301555956" page_id="102633571652720" color="blue" size="standard"></div>');
+          $(".listaCarteleraHorario article").each(function () {
+
+            var image = $(this ).find( "figure img" ).attr( "src");
+            var title  = $(this ).find( "figure img" ).attr("alt");
+            var data = {
+                image,
+                title
+            }
+            var json = JSON.stringify(data);
+            $(this).append('<div class="fb-messengermessageus" messenger_app_id="364048301555956" page_id="102633571652720" color="blue" size="standard">hola mundo</div>');
           });
         }
       }
 
-  </script>
+  </script> -->
 
 </body>
 
