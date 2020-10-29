@@ -30,6 +30,21 @@
     ></noscript>
     <!-- End Google Tag Manager (noscript) -->
 
+
+    <script>
+      window.fbAsyncInit = function() {
+          FB.init({
+            appId            : '364048301555956',
+            autoLogAppEvents : true,
+            xfbml            : true,
+            version          : 'v8.0'
+          });
+        };
+      </script>
+  
+      <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js"></script>
+
+      
     <button id="btnCloseID">close session</button>
     <section class="listaCarteleraHorario">
       <article>
@@ -80,16 +95,16 @@
     ></script>
 
 
-    <!-- <script>
+    <script>
       if ($("#btnCloseID").length) {
         if (localStorage.hasOwnProperty("email")) {
           $(".listaCarteleraHorario article .row").each(function () {
-            $(this).append("<button style='position: relative; top: 20px; float: right;' class='sendT' id=''>send to messenger</button>");
+            $(this).append('<div class="fb-messengermessageus" messenger_app_id="364048301555956" page_id="102633571652720" color="blue" size="standard"></div>');
           });
         }
       }
-        $('.sendT').remove();
-</script> -->
+       
+</script>
 
   
    
