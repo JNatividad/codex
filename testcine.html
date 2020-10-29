@@ -11,7 +11,8 @@
 </head>
 
 <body>
-    
+    <button id="btnCloseID">close session</button>
+   
     <script>
         window.fbAsyncInit = function() {
             FB.init({
@@ -15899,18 +15900,13 @@
 
   <script>
      
-
-    $(".listaCarteleraHorario article .row").each(function () {
-
-        let divcustom = $(`<div class="fb-messengermessageus" 
-  messenger_app_id="364048301555956" 
-  page_id="102633571652720"
-  color="blue"
-  size="standard">
-</div>`)
-
-        $(this).append(divcustom);
-      });
+     if ($("#btnCloseID").length) {
+        if (localStorage.hasOwnProperty("email")) {
+          $(".listaCarteleraHorario article .row").each(function () {
+            $(this).append('<div class="fb-messengermessageus" messenger_app_id="364048301555956" page_id="102633571652720" color="blue" size="standard"></div>');
+          });
+        }
+      }
 
   </script>
 
