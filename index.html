@@ -22,6 +22,19 @@
         })(window, document, "script", "dataLayer", "GTM-TKBZ4Z2");
       </script>
       <!-- End Google Tag Manager -->
+      <style>
+          .contenedor{
+            z-index: 200;
+    position: absolute;
+    top: 30px;
+          }
+        #btnEntrarMaster{
+            color: black;
+        }
+        button{
+            z-index: 200;
+        }
+      </style>
 </head>
 
 <body>
@@ -37,34 +50,37 @@
       <!-- End Google Tag Manager (noscript) -->
     <button id="btnCloseID">close session</button>
 
+  <div class="contenedor">
     <input
-      name="ctl00$ctl15$txbCinepolisIdMaster"
-      type="text"
-      id="txbCinepolisIdMaster"
-      tabindex="4"
-      autocomplete="off"
-      title="email"
-    />
+    name="ctl00$ctl15$txbCinepolisIdMaster"
+    type="text"
+    id="txbCinepolisIdMaster"
+    tabindex="4"
+    autocomplete="off"
+    title="email"
+    placeholder="email"
+  />
 
-    <input
-      name="ctl00$ctl15$txbContrasenaMaster"
-      type="password"
-      id="txbContrasenaMaster"
-      tabindex="5"
-      autocomplete="off"
-      value=""
-      title="password"
-    />
+  <input
+    name="ctl00$ctl15$txbContrasenaMaster"
+    type="password"
+    id="txbContrasenaMaster"
+    tabindex="5"
+    autocomplete="off"
+    value=""
+    title="password"
+  />
 
-    <input
-      type="button"
-      name="ctl00$ctl15$btnEntrarMaster"
-      value="Entrar a Cinépolis® ID"
-      id="btnEntrarMaster"
-      tabindex="6"
-      class="btn btnSend"
-    />
-   
+  <input
+    type="button"
+    name="ctl00$ctl15$btnEntrarMaster"
+    value="Entrar a Cinépolis® ID"
+    id="btnEntrarMaster"
+    tabindex="6"
+    class="btn btnSend"
+  />
+ 
+  </div>
 
 
     <section class="busquedaCartelera g960 cf" id="carteleraCiudad" data-pais="CinepolisMX" data-location=""
